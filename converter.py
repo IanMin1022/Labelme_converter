@@ -229,11 +229,10 @@ class labelme2yolo:
         df["cat_id"] = df_copy["cat_id"]
         
     def json2df(self, annotations_json, path, type=""):
-        parent_path = os.path.dirname(path[0])
         image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"]        
         image_dir = None
         
-        for file_path in glob.glob(os.path.join(parent_path, '*')):
+        for file_path in glob.glob(os.path.join(path, '*')):
             if os.path.isdir(file_path):
                 for sub_path in glob.glob(os.path.join(file_path, '*')):
                     if "images/train" in sub_path:
