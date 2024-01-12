@@ -3,7 +3,7 @@ import sys
 
 import converter
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-i',
@@ -55,3 +55,6 @@ if __name__ == "__main__":
         )
     else:
         print("[ERROR] Check which format is available")
+
+if __name__ == "__main__":
+    main()
